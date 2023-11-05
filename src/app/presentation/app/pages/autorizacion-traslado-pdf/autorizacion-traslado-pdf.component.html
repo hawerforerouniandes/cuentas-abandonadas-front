@@ -5,16 +5,18 @@
 
 <div id="imprimirrecepcion">
 
-<table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px; border: 2px solid;">
+<table style="width:100%; margin-bottom:5px; border: 2px solid;">
+  <caption></caption>
+  <th></th>
     <tr>
         <td style="width: 15%;border-right:2px solid;border-bottom:2px solid;height:20px;font-size: 70%">
             <b>C&oacute;digo F351</b>
         </td>
-        <th rowspan="4" style="width: 60%; text-align:center;vertical-align:middle;border-right:2px solid;font-size: 80%">
+        <th id="mitabla" rowspan="4" style="width: 60%; text-align:center;vertical-align:middle;border-right:2px solid;font-size: 80%">
             ORDEN DE CUMPLIMIENTO RECEPCI&Oacute;N DE RECURSOS N° {{ datosImpresion['consecutivo']}}
         </th>
         <td rowspan="4" style="width: 20%;text-align:center;vertical-align:middle">
-            <img src="./assets/img/jpg/LogoIcetex.jpg" style="width: 70%;height: auto;"/>
+            <img alt="descripcion" src="./assets/img/jpg/LogoIcetex.jpg" style="width: 70%;height: auto;"/>
         </td>
     </tr>
     <tr>
@@ -35,7 +37,9 @@
 
   <div style="text-align:center;font-size: 80%;"><b>DATOS DEL TRASLADO</b></div>
 
-  <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid;height:20px">
+  <table style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid;height:20px" >}
+    <caption></caption>
+    <th></th>
           <tr>
               <td style="border-right:2px solid;width: 20%;font-size: 70%"><b>Fecha de Solicitud</b></td>
               <td style="border-right:2px solid;width: 25%;font-size: 70%">
@@ -48,9 +52,11 @@
           </tr>
   </table>
 
-  <div style="width:100%;text-align:center;;font-size: 80%">La Vicepresidencia de Operaciones y Tecnolog&iacute;a luego de verificar la informaci&oacute;n transmitida por las Instituciones Financieras en el marco de la Ley 1777 de 2016, autoriza  la recepci&oacute;n de recursos por concepto de traslado del saldo de cuentas abandonadas bajo las siguientes condiciones:</div>
+  <div style="width:100%;text-align:center;font-size: 80%">La Vicepresidencia de Operaciones y Tecnolog&iacute;a luego de verificar la informaci&oacute;n transmitida por las Instituciones Financieras en el marco de la Ley 1777 de 2016, autoriza  la recepci&oacute;n de recursos por concepto de traslado del saldo de cuentas abandonadas bajo las siguientes condiciones:</div>
 
-  <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+  <table style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <caption></caption>
+    <th></th>
     <tr>
         <td style="border-right:2px solid;border-bottom:2px solid;width:25%;height: 25px;font-size: 70%">
             <b>Nombre Instituci&oacute;n Financiera</b>
@@ -107,7 +113,9 @@
 
   </div>
 
-  <table cellpadding="5" cellspacing="0" style="width:100%;border:2px solid; margin-bottom:5px;height:25px">
+  <table style="width:100%;border:2px solid; margin-bottom:5px;height:25px">
+    <caption></caption>
+    <th></th>
     <tr>
         <td style="text-align:center; background-color:#bfbfbf;border-bottom:2px solid;height: 25px;font-size: 70%" colspan="4">
             <b>VICEPRESIDENCIA DE OPERACIONES Y TECNOLOG&Iacute;A</b>
@@ -145,12 +153,12 @@
         <td style="border-right:2px solid;height:20px;font-size: 70%"><b>Firma</b>
         </td>
         <td style="text-align: left;border-right:2px solid">
-          <!-- <img *ngIf="funcionarioAdmin.firma != null" [src]="funcionarioAdmin.firma" style="margin-top: 10px; width: 40px;height: 40px;text-align: center"/> -->
+
           <div *ngIf="vbnoadmin != 0">
             <p style="font-size: 10px;margin-bottom: 20px;">
-                
+
                 {{datosOrden['fechaVbnoAdmin'] | date: 'dd/MM/yyyy h:mm:ss a'}}
-            
+
             </p>
             <p style="font-weight: bold;font-size: 15px;">{{funcionarioAdmin['nombreUsuario']}}</p>
           </div>
@@ -158,12 +166,12 @@
         </td>
       <td style="border-right:2px solid;font-size: 70%"><b>Firma</b>
         <td style="text-align: left">
-            <!-- <img *ngIf="funcionarioAutorizador.firma != null" [src]="funcionarioAutorizador.firma" style="margin-top: 10px; width: 40px;height: 40px;text-align: center"/> -->
+
             <div *ngIf="vbnoaut != 0">
                 <p style="font-size: 10px;margin-bottom: 20px;">
-                    
+
                     {{datosOrden['fechaVbnoAut'] | date: 'dd/MM/yyyy h:mm:ss a'}}
-                
+
                 </p>
                 <p style="font-weight: bold;font-size: 15px;">{{funcionarioAutorizador['nombreUsuario']}}</p>
             </div>
@@ -171,10 +179,12 @@
     </tr>
   </table>
 
-  <table cellpadding="5" cellspacing="0" style="width:100%;border:2px solid; margin-bottom:5px;margin-top:10px">
+  <table style="width:100%;border:2px solid; margin-bottom:5px;margin-top:10px">
+    <caption></caption>
+    <th></th>
     <tr>
         <td style="text-align:center; background-color:#bfbfbf;border-bottom:2px solid;height: 30px" colspan="4">
-            <!-- <b>VICEPRESIDENCIA FINANCIERA - TESORER&Iacute;A</b> -->
+
         </td>
     </tr>
     <tr>
@@ -183,36 +193,38 @@
     </tr>
     <tr>
         <td style="border-right:2px solid;border-bottom:2px solid;width:16%;font-size: 70%"><b>Fecha y Hora de Traslado:</b></td>
-        <td style="border-right:2px solid;border-bottom:2px solid;width:34%;font-size: 70%"> 
-            
+        <td style="border-right:2px solid;border-bottom:2px solid;width:34%;font-size: 70%">
+
             <div *ngIf="vbnotesoreria != 0">
                 {{datosOrden['fechaVbnoTesorero'] | date: 'dd/MM/yyyy h:mm:ss a'}}
             </div>
 
-           
-        
+
+
         </td>
         <td style="border-right:2px solid;border-bottom:2px solid;width:13%;font-size: 70%"><b>Fecha y Hora de Autorización:</b></td>
         <td style="border-bottom:2px solid;width:37%;font-size: 70%">
-            
+
             <div *ngIf="vbnotesoreria != 0">
                 {{datosOrden['fechaVbnoTesorero'] | date: 'dd/MM/yyyy h:mm:ss a'}}
             </div>
-        
+
         </td>
     </tr>
     <tr>
         <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%"><b>Cuenta CUD Entidad:</b></td>
         <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%">
-        
+
             <div *ngIf="vbnotesoreria != 0">
                 {{ datosImpresion['cuentaCudDestino']}}
             </div>
-          
+
         </td>
         <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%" rowspan="3"><b>Acción a Ejecutar:</b></td>
-        <td style="">
+        <td>
             <table style="width:100%">
+              <caption></caption>
+              <th></th>
                 <tr>
                     <td style="width:25%;font-size: 80%">Autoriza</td>
                     <td style="border:1px solid; width:5%">&nbsp;X</td>
@@ -223,14 +235,14 @@
     </tr>
     <tr>
         <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%"><b>Número de Transacción:</b></td>
-        <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%"> 
-            
+        <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%">
+
             <div *ngIf="vbnotesoreria != 0">
                 {{datosOrden['nroTransacion']}}
             </div>
-        
+
         </td>
-        <td style=""></td>
+        <td></td>
 
     </tr>
     <tr>
@@ -240,10 +252,12 @@
             <div *ngIf="vbnotesoreria != 0">
                 {{datosOrden['nroOperacion']}}
             </div>
-           
+
         </td>
         <td style="border-bottom:2px solid;">
             <table style="width:100%">
+              <caption></caption>
+              <th></th>
                 <tr>
                     <td style="width:25%;font-size: 80%">Rechaza</td>
                     <td style="border:1px solid; width:5%">&nbsp;</td>
@@ -288,26 +302,26 @@
         <td style="border-right:2px solid;border-bottom:2px solid;width: 10px;font-size: 70%"><b>Firma</b>
         </td>
         <td style="border-right:2px solid;border-bottom:2px solid;">
-            <!-- <img *ngIf="funcionarioTesorero.firma != null" [src]="funcionarioTesorero.firma" style="margin-top: 10px; width: 40px;height: 40px;text-align: center"/> -->
-                
+
+
             <div *ngIf="vbnotesoreria != 0">
                 <p style="font-size: 10px;margin-bottom: 20px;">
-                    
+
                     {{datosOrden['fechaVbnoTesorero'] | date: 'dd/MM/yyyy h:mm:ss a'}}
-                
+
                 </p>
                 <p style="font-weight: bold;font-size: 15px;">{{funcionarioTesorero['nombreUsuario']}}</p>
             </div>
         </td>
         <td style="border-right:2px solid;border-bottom:2px solid;font-size: 70%"><b>Firma</b></td>
         <td style="border-bottom:2px solid;">
-            <!-- <img *ngIf="funcionarioTesorero.firma != null" [src]="funcionarioTesorero.firma" style="margin-top: 10px; width: 40px;height: 40px;text-align: center"/> -->
-            
+
+
             <div *ngIf="vbnotesoreria != 0">
                 <p style="font-size: 10px;margin-bottom: 20px;">
-                    
+
                     {{datosOrden['fechaVbnoTesorero'] | date: 'dd/MM/yyyy h:mm:ss a'}}
-                
+
                 </p>
                 <p style="font-weight: bold;font-size: 15px;">{{funcionarioTesorero['nombreUsuario']}}</p>
             </div>

@@ -2,7 +2,7 @@
     <div>{{title}}</div>
         <form [formGroup]="funcionarioForm" method="post" (ngSubmit)="onSubmit()" (keydown.enter)="$event.preventDefault()">
             <mat-card-header>
-            
+
             </mat-card-header>
                 <mat-card-content style="margin-top: 40px;">
                     <div class="mb-3 col-sm-10 col-md-10" *ngIf="idfuncionario== 0">
@@ -42,20 +42,20 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="form-group">
                             <label class="required-field">Firma Digital:</label>
-                            <img class="image-slide" style="max-width: 80%;" [src]="rutafoto">
-                           
+                            <img class="image-slide" style="max-width: 80%;" [src]="rutafoto" alt="descripcion">
+
                         </div>
                     </div>
 
-                   
+
                     <div class="col-md-4  col-sm-4">
 
                         <h2>Firma(*)</h2>
                         <label class="required-field">Subir Foto Firma Digital tipo JPEG ó PNG:</label>
                         <div class="form-group" style="margin-bottom: 40px;">
-                        
+
                             <input type="file" class="dropify" (change)="onFileChange($event)" data-height="80" data-max-file-size="2M" data-allowed-file-extensions="jpeg" formControlName="foto" />
-                                
+
                         </div>
                     </div>
 
@@ -70,10 +70,10 @@
 
                 </mat-card-content>
         </form>
-       
+
 </mat-card>
-   
 
-   
 
-      
+
+
+

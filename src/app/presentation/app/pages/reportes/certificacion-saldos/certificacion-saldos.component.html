@@ -1,6 +1,6 @@
 <div class="container" style="min-height: 420px;">
     <div class="row mb-5">
-        <div class="col-8">Cuentas abandonadas – Reporte Certificación de Saldos</div>
+        <div class="col-8">Cuentas abandonadas  Reporte Certificación de Saldos</div>
     </div>
 
     <div class="row">
@@ -20,13 +20,13 @@
         </div>
 
           <div class="col-4">
-            <label>Fecha Corte</label> 
-            <input type="date" class="form-control" [(ngModel)]="fechafinal">  
-          </div> 
+            <label>Fecha Corte</label>
+            <input type="date" class="form-control" [(ngModel)]="fechafinal">
+          </div>
           <div class="col-4">
             <br>
             <input type="button" class="form-control btn-primary-icetex" style="width: 30%;margin: 0 auto;" (click)="buscar()" value="Consultar">
-          </div> 
+          </div>
     </div>
 
   <div class="container" id="imprimircertificado" style="font-size: 22px;" *ngIf="swimpresion">
@@ -35,21 +35,21 @@
     <div class="row">
 
         <div class="col-md-12 text-left">
-          <img src="./assets/img/jpg/LogoIcetex.jpg" style="width: 20%;height: auto;"/>
+          <img alt="" src="./assets/img/jpg/LogoIcetex.jpg" style="width: 20%;height: auto;"/>
         </div>
     </div>
 
     <br>
-    <hr>    
+    <hr>
     <br>
 
     <div class="row text-center" style="font-weight: bold;">
         <div class="col-md-12">
             <p style="font-size: 80%">CERTIFICACIÓN CUENTAS ABANDONADAS</p>
-            <!-- <p style="font-size: 80%">VFN-DTE-20201130-001030-01</p> -->
+
         </div>
     </div>
-  
+
     <br><br>
 
     <div class="row text-justify" style="font-size: 80%">
@@ -60,7 +60,9 @@
 
     <br>
 
-    <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <table style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+      <caption></caption>
+      <th></th>
       <tr>
 
           <td colspan="4" style="border-bottom:2px solid;height:20px" *ngIf="usuario.idPerfil != 4 || usuario.idPerfil != 5">
@@ -73,7 +75,10 @@
 
     <br>
 
-    <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <table
+    style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <caption></caption>
+    <th></th>
       <tr>
         <td  class="text-center" style="border-right:2px solid;border-bottom:2px solid;height:20px;font-size: 80%;width:37%">
           <label style="font-weight: bold;">Concepto</label>
@@ -84,7 +89,7 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%;width:36%">
           <label style="font-weight: bold;">Número de Cuentas</label>
         </td>
-       
+
       </tr>
 
       <tr>
@@ -97,7 +102,7 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%">
           {{datos.numeroTraslados}}
         </td>
-       
+
       </tr>
 
       <tr>
@@ -110,14 +115,16 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%">
           {{datos.numeroReintegros}}
         </td>
-       
+
       </tr>
 
     </table>
-  
+
     <br>
 
-    <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <table style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+      <caption></caption>
+      <th></th>
       <tr>
         <td  class="text-center" style="border-right:2px solid;border-bottom:2px solid;height:20px;width:35.2%;font-size: 80%">
           <label style="font-weight: bold;">Concepto</label>
@@ -125,7 +132,7 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%;width: 60%">
           <label style="font-weight: bold;">Valor Intereses</label>
         </td>
-    
+
       </tr>
 
       <tr>
@@ -135,8 +142,8 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%">
           {{datos.totalRemuneracionAcumulada |number}}
         </td>
-       
-       
+
+
       </tr>
 
       <tr>
@@ -146,15 +153,17 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%">
           {{datos.totalRemuneracion |number}}
         </td>
-       
-       
+
+
       </tr>
 
     </table>
 
     <br>
 
-    <table cellpadding="5" cellspacing="0" style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+    <table style="width:100%; margin-bottom:5px;margin-top:10px; border: 2px solid">
+      <caption></caption>
+      <th></th>
       <tr>
         <td  class="text-center" style="border-right:2px solid;border-bottom:2px solid;height:20px;font-size: 80%;width:37%">
           <label style="font-weight: bold;">Concepto</label>
@@ -165,7 +174,7 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%;width:36%">
           <label style="font-weight: bold;">Número de Cuentas administradas</label>
         </td>
-       
+
       </tr>
 
       <tr>
@@ -178,7 +187,7 @@
         <td class="text-center" style="border-right:2px solid;border-bottom:2px solid;font-size: 80%">
           {{numerocuentas}}
         </td>
-       
+
       </tr>
 
     </table>
@@ -195,7 +204,7 @@
     <div class="row text-center" style="margin-bottom:-40px;">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-          <!-- <img class="image-slide" [src]="fotorespuesta['foto']"> -->
+
       </div>
       <div class="col-md-2"></div>
   </div>
@@ -203,7 +212,7 @@
   <div class="row text-center" style="margin-bottom:-20px;">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img class="image-slide" [src]="datos.firma">
+        <img class="image-slide" [src]="datos.firma" alt="">
     </div>
     <div class="col-md-2"></div>
   </div>
@@ -241,15 +250,15 @@
     </div>
 
     <div class="col-md-10">
-        <img src="./assets/img/jpg/piepagina.jpg" width="750px">
+        <img src="./assets/img/jpg/piepagina.jpg" width="750px" alt="">
     </div>
   </div>
-  
+
   </div>
 
   <br>
 
-  
+
 
       <div class="row justify-content-center" *ngIf="swimpresion">
 

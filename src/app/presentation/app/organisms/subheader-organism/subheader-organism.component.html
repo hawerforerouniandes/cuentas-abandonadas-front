@@ -1,33 +1,10 @@
 <mat-toolbar color="primary" aria-label="menu salto a contenido principal">
-  <img src="./assets/img/svg/logo-icetex.svg" class="img-logo">
+  <img src="./assets/img/svg/logo-icetex.svg" class="img-logo" alt="descripcion">
   <button mat-icon-button fxHide.xs fxHide.sm fxShow (click)="drawer.toggle()" matTooltip="Menu" title="boton para contraer menu lateral izquierdo">
     <mat-icon>menu</mat-icon>
   </button>
   <span class="width-spacer"></span>
-  <!-- menu help -->
-<!--  <button mat-button [matMenuTriggerFor]="menuHelp" matTooltip="Ayuda">
-    <mat-icon>help</mat-icon>
-    <span fxHide.xs fxHide.sm>Ayuda</span>
-  </button>
-  <mat-menu #menuHelp="matMenu">
-    <button mat-menu-item aria-label="Tipificaciones de cobranza">Tipificaciones de cobranza</button>
-    <button mat-menu-item aria-label="Educación financiera">Educación financiera</button>
-    <button mat-menu-item aria-label="Atención en línea">Atención en línea</button>
-    <button mat-menu-item aria-label="Radicación PQRS">Radicación PQRS</button>
-  </mat-menu>-->
-  <!-- end menu help -->
-  <!-- menu products -->
-<!--  <button mat-button [matMenuTriggerFor]="menuProducts" matTooltip="Productos">
-    <mat-icon>format_list_bulleted</mat-icon>
-    <span fxHide.xs fxHide.sm>Productos</span>
-  </button>
-  <mat-menu #menuProducts="matMenu">
-    <button mat-menu-item>Tu eliges 40%</button>
-    <button mat-menu-item>Tu eliges 60%</button>
-    <button mat-menu-item>Solicitar producto</button>
-  </mat-menu>-->
-  <!-- end menu products -->
-  <!-- menu profile -->
+
   <button mat-button [matMenuTriggerFor]="menuProfile" matTooltip="Perfil">
     <mat-icon>perm_identity</mat-icon>
     <span fxHide.xs fxHide.sm>Perfil</span>
@@ -50,5 +27,5 @@
   <button mat-icon-button fxShow.xs fxShow.sm fxHide (click)="drawer.toggle()" matTooltip="Menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <!-- end menu profile -->
+
 </mat-toolbar>
