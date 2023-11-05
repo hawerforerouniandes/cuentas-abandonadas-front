@@ -1,0 +1,7 @@
+organization=hawerforerouniandes
+projectKey=hawerforerouniandes_cuentas-abandonadas-front
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.49842
+dashboardUrl=https://sonarcloud.io/dashboard?id=hawerforerouniandes_cuentas-abandonadas-front
+ceTaskId=AYudwDvSmWO-IlKsR0js
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYudwDvSmWO-IlKsR0js
